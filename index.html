@@ -1,100 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sameer</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        min-height: 100vh;
-        background-color: #ffffff; 
-        font-family: 'Roboto', sans-serif; 
-    }
-    .container {
-        text-align: center;
-        margin-top: 20px; /* Adjust the margin as needed */
-    }
-    .profile-img {
-        border-radius: 50%;
-        width: 150px; /* Adjust the size as needed */
-        height: 150px; /* Adjust the size as needed */
-        margin-bottom: 20px; /* Adjust the margin as needed */
-    }
-    .gallery {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 20px; /* Adjust the margin as needed */
-    }
-    .gallery img {
-        width: 40px; /* Adjust the size as needed */
-        height: 40px; /* Adjust the size as needed */
-        margin: 5px; /* Adjust the margin between images */
-        border-radius: 10px; /* Optional: Add border radius */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sameer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: #ffffff; 
+            font-family: 'Roboto', sans-serif; 
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            margin-bottom: 20px; /* Adjust the margin as needed */
+            /* Center the image */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px; /* Adjust the margin as needed */
+        }
+        .gallery img {
+            width: 40px; /* Adjust the size as needed */
+            height: 40px; /* Adjust the size as needed */
+            margin: 5px; /* Adjust the margin between images */
+            border-radius: 10px; /* Optional: Add border radius */
+        }
 
-    .column {
-        float: left; /* Float the columns to the left */
-        width: 50%; /* Make each column take up 50% of the container width */
-        box-sizing: border-box; /* Include padding and border in the width */
-        padding: 20px; /* Optional: Add some padding for spacing */
-    }
+        .column {
+            float: left; /* Float the columns to the left */
+            width: 50%; /* Make each column take up 50% of the container width */
+            box-sizing: border-box; /* Include padding and border in the width */
+            padding: 20px; /* Optional: Add some padding for spacing */
+        }
 
-    /* Clear floats after the columns */
-    .clearfix::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-</style>
+        /* Clear floats after the columns */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-    <img class="profile-img" src="assets/img/sam.png">
-    <h1>SAMEER</h1>
-    <p>"Passionate developer and content creator crafting engaging digital experiences with code and creativity."</p>
-    <div class="gallery">
-        <a href="https://www.instagram.com/contactingsameer"><img src="assets/img/instagram.png"></a>
-        <a href="https://www.facebook.com/contactingsameer"><img src="assets/img/facebook.png"></a>
-        <a href="https://www.youtube.com/@ContactingSameer"><img src="assets/img/youtube.png"></a>
-        <a href="https://www.linkedin.com/in/contactingsameer"><img src="assets/img/linkedin.png"></a>
-        <a href="https://www.snapchat.com/add/contactingsam"><img src="assets/img/snapchat.png"></a>
-        <a href="https://contactingsameer.github.io/Curriculum-Vitae"><img src="assets/img/onlineresume.png"></a>
-        <a href="https://github.com/ContactingSameer"><img src="assets/img/github.png"></a>
-    </div>
-    <div class="container clearfix">
-        <div class="column">
-            <!-- Content for the left column -->
-            <h3>Team Vaev</h3> 
-            <div class="gallery">
-                <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
-                <a href=""><img src="assets/img/x.png"></a>
-            </div>
-            <h3>Vanquisher</h3> 
-            <div class="gallery">
-                <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
-                <a href=""><img src="assets/img/twitch.png"></a>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-8">
+        <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <div class="container">
+                <img class="profile-img" src="assets/img/sam.png">
+                <h1 class="text-3xl font-bold text-center mb-4">SAMEER</h1>
+                <p>"Passionate developer and content creator crafting engaging digital experiences with code and creativity."</p>
+                <div class="gallery">
+                    <a href="https://www.instagram.com/contactingsameer"><img src="assets/img/instagram.png"></a>
+                    <a href="https://www.facebook.com/contactingsameer"><img src="assets/img/facebook.png"></a>
+                    <a href="https://www.youtube.com/@ContactingSameer"><img src="assets/img/youtube.png"></a>
+                    <a href="https://www.linkedin.com/in/contactingsameer"><img src="assets/img/linkedin.png"></a>
+                    <a href="https://www.snapchat.com/add/contactingsam"><img src="assets/img/snapchat.png"></a>
+                    <a href="https://contactingsameer.github.io/Curriculum-Vitae"><img src="assets/img/onlineresume.png"></a>
+                    <a href="https://github.com/ContactingSameer"><img src="assets/img/github.png"></a>
+                </div>
+                <div class="container clearfix">
+                    <div class="column">
+                        <!-- Content for the left column -->
+                        <h3>Team Vaev</h3> 
+                        <div class="gallery">
+                            <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
+                            <a href=""><img src="assets/img/x.png"></a>
+                        </div>
+                        <h3>Vanquisher</h3> 
+                        <div class="gallery">
+                            <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
+                            <a href=""><img src="assets/img/twitch.png"></a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <!-- Content for the right column -->
+                        <h3>Born To Code</h3> 
+                        <div class="gallery">
+                            <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
+                        </div>
+                        <h3>Enchanted Records</h3> 
+                        <div class="gallery">
+                            <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="column">
-            <!-- Content for the right column -->
-            <h3>Born To Code</h3> 
-            <div class="gallery">
-                <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
-            </div>
-            <h3>Enchanted Records</h3> 
-            <div class="gallery">
-                <a href="https://www.instagram.com/contactingsameer/"><img src="assets/img/instagram.png"></a>
-            </div>
-        </div>
     </div>
-</div>
 </body>
 </html>
