@@ -39,60 +39,10 @@
             margin-top: 20px; /* Adjust the margin as needed */
         }
         .gallery img {
-            display: flex;            
             width: 40px; /* Adjust the size as needed */
             height: 40px; /* Adjust the size as needed */
             margin: 5px; /* Adjust the margin between images */
             border-radius: 10px; /* Optional: Add border radius */
-        }
-
-        .column {
-            float: left; /* Float the columns to the left */
-            width: 50%; /* Make each column take up 50% of the container width */
-            box-sizing: border-box; /* Include padding and border in the width */
-            padding: 20px; /* Optional: Add some padding for spacing */
-        }
-
-        /* Clear floats after the columns */
-        .clearfix::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Styling for the contact section */
-        .contact {
-            margin-top: 100px; /* Adjust the top margin as needed */
-            padding: 20px; /* Add padding to the contact section */
-            border-radius: 8px; /* Border radius */
-        }
-
-        /* Style for the form elements inside the contact section */
-        .contact form label {
-            margin-bottom: 10px; /* Add some space between labels and input fields */
-            font-weight: lighter; /* Make labels bold */
-            display: block; /* Display labels as block elements */
-            text-align: left; /* Align labels to the left */
-        }
-
-        .contact form input[type="text"],
-        .contact form input[type="email"],
-        .contact form textarea {
-            width: calc(100% - 22px); /* Make input fields take up full width */
-            padding: 10px; /* Add padding */
-            border: 1px solid #000000; /* Border style */
-            box-sizing: border-box; /* Include padding and border in the width */
-            display: flex; /* Display input fields as inline-block elements */
-        }
-
-        .contact form button[type="submit"] {
-            background-color: #000000; /* Button background color */
-            color: #fff; /* Text color */
-            padding: 10px 20px; /* Padding */
-            border: none; /* No border */
-            border-radius: 5px; /* Border radius */
-            cursor: pointer; /* Cursor style */
-            transition: background-color 0.3s ease; /* Smooth transition */
         }
     </style>
 </head>
@@ -102,6 +52,7 @@
             <div class="container">
                 <img class="profile-img" src="assets/img/sam.png">
                 <h1 class="text-3xl font-bold text-center mb-4">SAMEER</h1>
+                <h3 class="text-1xl font-regular text-center mb-4">@contactingsameer</h3>
                 <p>"Developer and passionate content creator crafting engaging digital experiences with code and creativity."</p>
                 <div class="gallery">
                     <a href="https://www.instagram.com/contactingsameer"><img src="assets/img/instagram.png"></a>  
@@ -112,25 +63,7 @@
                     <a href="https://contactingsameer.github.io/Curriculum-Vitae"><img src="assets/img/onlineresume.png"></a>
                     <a href="https://github.com/ContactingSameer"><img src="assets/img/github.png"></a>
                     <a href="https://vsco.co/contactingsameer/gallery"><img src="assets/img/vsco.png"></a>
-                </div>
-                <div class="contact">
-                    <h3 class="text-3xl font-bold text-center mb-4">Contact Me</h3>
-                    <form action="process_form.php" method="post">
-                        <div class="flex mb-4">
-                            <div class="w-1/2 mr-2">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="w-1/2 ml-2">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" rows="4" required></textarea><br>
-                        
-                        <button type="submit">Submit</button>
-                    </form>
+                    <a href="mailto:contactingsameer@gmail.com"><img src="assets/img/gmail.png"></a>
                 </div>
             </div>
         </div>
