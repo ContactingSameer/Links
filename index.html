@@ -39,6 +39,7 @@
             margin-top: 20px; /* Adjust the margin as needed */
         }
         .gallery img {
+            display: flex;            
             width: 40px; /* Adjust the size as needed */
             height: 40px; /* Adjust the size as needed */
             margin: 5px; /* Adjust the margin between images */
@@ -57,6 +58,60 @@
             content: "";
             display: table;
             clear: both;
+        }
+
+        /* Styling for the contact section */
+        .contact {
+            margin-top: 100px; /* Adjust the top margin as needed */
+            padding: 20px; /* Add padding to the contact section */
+            border-radius: 8px; /* Border radius */
+        }
+
+        /* Style for the form elements inside the contact section */
+        .contact form label {
+            margin-bottom: 10px; /* Add some space between labels and input fields */
+            font-weight: lighter; /* Make labels bold */
+            display: block; /* Display labels as block elements */
+            text-align: left; /* Align labels to the left */
+        }
+
+        .contact form input[type="text"],
+        .contact form input[type="email"],
+        .contact form textarea {
+            width: calc(100% - 22px); /* Make input fields take up full width */
+            padding: 10px; /* Add padding */
+            border: 1px solid #000000; /* Border style */
+            box-sizing: border-box; /* Include padding and border in the width */
+            display: flex; /* Display input fields as inline-block elements */
+        }
+
+        .contact form button[type="submit"] {
+            background-color: #000000; /* Button background color */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Border radius */
+            cursor: pointer; /* Cursor style */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .contact form button[type="submit"]:hover {
+            background-color: #414141; /* Button background color on hover */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px; /* Adjust container padding for smaller screens */
+            }
+            .profile-img {
+                width: 120px; /* Adjust image size for smaller screens */
+                height: 120px; /* Adjust image size for smaller screens */
+            }
+            .gallery img {
+                width: 30px; /* Adjust image size for smaller screens */
+                height: 30px; /* Adjust image size for smaller screens */
+            }
         }
     </style>
 </head>
@@ -77,40 +132,27 @@
                     <a href="https://github.com/ContactingSameer"><img src="assets/img/github.png"></a>
                     <a href="https://vsco.co/contactingsameer/gallery"><img src="assets/img/vsco.png"></a>
                 </div>
-                <div class="container clearfix">
-                    
-                    <div class="column">
-                        <!-- Content for the left column -->
-                        <h3>Team Vaev</h3> 
-                        <div class="gallery">
-                            <a href="https://www.instagram.com/teamvaev"><img src="assets/img/instagram.png"></a>
-                            <a href="https://www.youtube.com/@team-vaev"><img src="assets/img/youtube.png"></a>
-                            <a href="https://twitter.com/teamvaev"><img src="assets/img/x.png"></a>
-                            <a href="https://www.facebook.com/TeamVaev"><img src="assets/img/facebook.png"></a>
+                <div class="contact">
+                    <h3 class="text-3xl font-bold text-center mb-4">Contact Me</h3>
+                    <form action="process_form.php" method="post">
+                        <div class="flex mb-4">
+                            <div class="w-full md:w-1/2 mb-4 md:mb-0 md:mr-2">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="w-full md:w-1/2 md:ml-2">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
                         </div>
-                        <h3>Born To Code</h3> 
-                        <div class="gallery">
-                            <a href="https://www.youtube.com/@borntocodetech"><img src="assets/img/youtube.png"></a>  
-                        </div>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" required></textarea><br>
                         
-                    </div>
-                    <div class="column">
-                        <!-- Content for the right column -->
-                        <h3>Vanquisher</h3> 
-                        <div class="gallery">
-                            <a href="https://www.youtube.com/@vaevvanquisher"><img src="assets/img/youtube.png"></a>   
-                            <a href="https://www.twitch.tv/vaevvanquisher"><img src="assets/img/twitch.png"></a>   
-                        </div>
-                        <h3>Enchanted Records</h3> 
-                        <div class="gallery">
-                            <a href="https://www.youtube.com/@EnchantedRecordsMusic"><img src="assets/img/youtube.png"></a>  
-                        </div>
-                    </div>
+                        <button type="submit">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
-
