@@ -10,36 +10,96 @@
         body {
             margin: 0;
             padding: 0;
+            background-color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .cell {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0px 9px rgba(0, 0, 0, 0.3);
+            text-align: center;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            background-color: #ffffff; 
-            font-family: 'Roboto', sans-serif; 
+            width: 100%;
+            max-width: 300px; /* Adjust the maximum width of the cell */
+        }
+        h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+            font-size: 1.8em; /* Adjusted for responsiveness */
+        }
+        .bio {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .photo {
+            width: 100%;
+            max-width: 150px; /* Adjusted for responsiveness */
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .subscribe-button {
+            background-color: #ff0000;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .subscribe-button:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
         }
         .container {
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .profile-img {
+            width: 100%;
+            max-width: 150px; /* Adjusted for responsiveness */
+            height: auto;
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
             margin-bottom: 20px;
         }
         .gallery img {
-            width: 40px;
-            height: 40px;
+            width: 100%;
+            max-width: 40px; /* Adjusted for responsiveness */
+            height: auto;
             margin: 5px;
             border-radius: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .cell {
+                padding: 10px;
+                margin-bottom: 20px; /* Add margin between cells vertically */
+            }
+            h1 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto mt-8 px-4">
-        <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-            <div class="container">
-                <img class="profile-img mx-auto" src="assets/img/sam.png" alt="Sameer">
+        <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <div class="profile">
                 <h1 class="text-3xl font-bold text-center mb-2">SAMEER</h1>
+                <img class="profile-img mx-auto" src="assets/img/sam.png" alt="Sameer">
                 <p class="text-center text-gray-700 mb-4">"Developer and passionate content creator crafting engaging digital experiences with code and creativity."</p>
                 <div class="gallery flex flex-wrap justify-center">
                     <a href="https://www.instagram.com/contactingsameer" class="m-2"><img src="assets/img/instagram.png" alt="Instagram"></a>  
@@ -47,15 +107,38 @@
                     <a href="https://www.youtube.com/@ContactingSameer" class="m-2"><img src="assets/img/youtube.png" alt="YouTube"></a>
                     <a href="https://www.linkedin.com/in/contactingsameer" class="m-2"><img src="assets/img/linkedin.png" alt="LinkedIn"></a>
                     <a href="https://developers.google.com/profile/u/ContactingSameer" class="m-2"><img src="assets/img/google-developers.png" alt="Google"></a> 
+                    <a href="https://maps.app.goo.gl/sQt77Uy9koAk1wH18?g_st=ac" class="m-2"><img src="assets/img/google-maps.png" alt="Google"></a> 
                     <a href="https://www.snapchat.com/add/contactingsam" class="m-2"><img src="assets/img/snapchat.png" alt="Snapchat"></a>
                     <a href="https://contactingsameer.github.io/Curriculum-Vitae" class="m-2"><img src="assets/img/curriculum-vitae.png" alt="Curriculum Vitae"></a>
                     <a href="https://github.com/ContactingSameer" class="m-2"><img src="assets/img/github.png" alt="GitHub"></a>
                     <a href="https://vsco.co/contactingsameer/gallery" class="m-2"><img src="assets/img/vsco.png" alt="VSCO"></a>
                     <a href="mailto:contactingsameer@gmail.com" class="m-2"><img src="assets/img/gmail.png" alt="Gmail"></a>
-                     
+                </div>
+            </div>
+    
+            <div class="youtube">
+                <h1 class="text-2xl font-bold text-center mt-8">YouTube Channel</h1>
+                <div class="container">
+                    <div class="cell">
+                        <img src="assets/img/Vanquisher.png" alt="Vanquisher" class="photo">
+                        <div class="content">
+                            <h1>Vanquisher</h1>
+                            <div class="bio">Unleashing my gaming potential where skill meets entertainment.</div>
+                            <a href="https://www.youtube.com/@VaevVanquisher" class="subscribe-button">Subscribe</a>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <img src="assets/img/BornToCode.png" alt="BornToCode" class="photo">
+                        <div class="content">
+                            <h1>Born To Code</h1>
+                            <div class="bio">Your go-to destination for tech solutions and coding tips.</div>
+                            <a href="https://www.youtube.com/@BornToCodeTech" class="subscribe-button">Subscribe</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
